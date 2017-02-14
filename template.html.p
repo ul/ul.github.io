@@ -12,6 +12,16 @@
 
 <body>
     ◊->html[doc]
+    ◊define[top (parent here)]
+    ◊define[prv (and (not (equal? (previous here) top)) (previous here))]
+    ◊define[nxt (next here)]
+    ◊->html{
+      ◊div[#:class "nav"]{
+        ◊nav-link[prv 'larr]
+        ◊nav-link[top 'uarr]
+        ◊nav-link[nxt 'rarr]
+      }
+    }
 </body>
 
 </html>

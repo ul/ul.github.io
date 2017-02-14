@@ -1,9 +1,13 @@
 #lang racket/base
 (require
  racket/file
+ txexpr
+ pollen/cache
+ pollen/core
+ pollen/file
+ pollen/pagetree
  pollen/tag
  pollen/decode
- txexpr
  pollen/misc/tutorial
  pollen/unstable/pygments)
 (provide (all-defined-out) highlight)
@@ -36,7 +40,7 @@
   `(,title-tag ,@elements))
 
 (define code-tag 'span)
-(define code-class "my-code")
+(define code-class "code")
 (define (code . elements)
   `(,code-tag ((class ,code-class) ,exclusion-mark-attr) ,@elements))
 
@@ -49,3 +53,34 @@
 
 (define (gitlink repo . texts)
   `(span ((class ,code-class)) ,(apply link (format "http://github.com/~a" repo) texts)))
+
+(define (date metas)
+  `(div ((class "date note")) ,(select-from-metas 'date metas)))
+
+(define (nav-link doc arr)
+  (when/splice
+   doc
+   (let ([href (symbol->string doc)])
+     `(a ((class "box-link") (href ,href))
+         (div ,arr)
+         (div ,(select 'h1 doc))))))
+
+(define (page-children metas)
+  (let-values ([(dir name _)
+                (split-path (->output-path (select-from-metas 'here-path metas)))])
+    (children name "index.ptree")))
+
+(define (pm-metas out)
+  (cached-metas (->markup-source-path out)))
+
+(define (pm-doc out)
+  (cached-doc (->markup-source-path out)))
+
+(define (post->item post)
+  (let* ([post (symbol->string post)]
+         [metas (pm-metas post)]
+         [doc (pm-doc post)])
+    `(li ,(date metas) ,(link post (select 'h1 doc)))))
+
+(define (list-posts metas)
+  `(ul ,@(map post->item (page-children metas))))

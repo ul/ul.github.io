@@ -1,3 +1,7 @@
 #lang pollen
 
-index.html
+◊index.html{
+  ◊archive.html{
+    syncing-om.html
+  }
+}

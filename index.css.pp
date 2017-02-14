@@ -7,9 +7,12 @@
 ◊define[background-color "#fffff8"]
 ◊define[code-background-color "#fcfcf8"]
 ◊define[code-border-color "#f0f0f8"]
+◊define[link-background-color "#afeeee"]
 
 html, body {
   font-size: ◊|point-size|px;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 body {
@@ -17,7 +20,8 @@ body {
   font-family: 'PT Serif', serif;
   line-height: ◊|line-height|;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga' 1, 'kern' 1;
   color: ◊|text-color|;
@@ -29,6 +33,7 @@ body {
   max-width: ◊|line-length|ch;
   padding: 0;
   margin: 3rem 0 0 0;
+  position: relative;
 }
 
 main {
@@ -41,7 +46,6 @@ main {
 
 .topic {
   text-transform: uppercase;
-  border-top: 1px solid #666;
   padding-top: 0em;
   margin-top: 3rem;
 }
@@ -49,7 +53,7 @@ main {
 .highlight {
   width: 100%;
   margin-right: 4rem;
-  background: ◊|code-background-color|;
+  background-color: ◊|code-background-color|;
   padding: 0.5rem;
   border-top: 1px solid ◊|code-border-color|;
   border-bottom: 1px solid ◊|code-border-color|;
@@ -62,7 +66,7 @@ main {
   display: none;
 }
 
-pre {
+pre, .code {
   font-family: 'PT Mono', monospace;
 }
 
@@ -72,6 +76,11 @@ pre {
 ◊define[keyword-color]{#07a}
 ◊define[name-color]{#444}
 ◊define[literal-color]{#275}
+
+.code {
+  color: ◊|keyword-color|;
+  background-color: ◊|code-background-color|;
+}
 
 ◊; styling classes for Pygments
 .p { color: ◊|paren-color|;}
@@ -147,7 +156,9 @@ a {
   transition-duration: 0.2s;
 }
 
-a:active { color: #777; }
+a:active {
+  color: #777;
+}
 
 a:after {
   position: relative;
@@ -168,13 +179,56 @@ a.no-symbol-before:after {
   content: none;
 }
 
-div > a:after {
+div > a:after, li a:after {
   content: none;
 }
 
 a:hover {
-  background: #f0f8f8;
+  background-color: ◊|link-background-color|;
   transition-property: background;
   transition-duration: 0.2s;
   border-radius: 0.35rem;
+}
+
+.box-link {
+  text-transform: uppercase;
+  padding: 1rem;
+  color: black;
+  opacity: 0.5;
+  font-size: 80%;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-link:hover {
+  border-radius: 0.1rem;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+}
+
+.box-link:not(:first-child) {
+  border-left: 1px dotted ◊|text-color|;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.date {
+  opacity: 0.8;
+}
+
+.note {
+  position: absolute;
+  left: -8rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
