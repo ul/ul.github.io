@@ -1,0 +1,166 @@
+html, body {
+  font-size: 24px;
+}
+
+body {
+  /* font-family: 'PT Sans', sans-serif; */
+  font-family: 'PT Serif', serif;
+  line-height: 1.35;
+  display: flex;
+  justify-content: center;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+  color: #222;
+  background-color: #fffff8;
+}
+
+.content {
+  flex: 1;
+  max-width: 60ch;
+  padding: 0;
+  margin: 3rem 0 0 0;
+}
+
+main {
+  margin-bottom: 10rem;
+}
+
+.mono {
+  font-family: 'PT Mono', monospace;
+}
+
+.topic {
+  text-transform: uppercase;
+  border-top: 1px solid #666;
+  padding-top: 0em;
+  margin-top: 3rem;
+}
+
+.highlight {
+  width: 100%;
+  margin-right: 4rem;
+  background: #fcfcf8;
+  padding: 0.5rem;
+  border-top: 1px solid #f0f0f8;
+  border-bottom: 1px solid #f0f0f8;
+  margin-bottom: 1.2rem;
+  /* font-size: 20px; */
+  font-size: 80%;
+}
+
+.highlight .linenos {
+  display: none;
+}
+
+pre {
+  font-family: 'PT Mono', monospace;
+}
+
+
+
+
+
+
+
+.p { color: #888;}
+.c { color: #998; font-style: italic; } /* Comment */
+.err { color: red; font-style: italic; } /* Error */
+.o { color: #000; } /* Operator */
+.cm { color: #c2741f; font-style: italic } /* Comment.Multiline */
+.cp { color: #c2741f; font-style: italic } /* Comment.Preproc */
+.c1 { color: #c2741f; font-style: italic } /* Comment.Single */
+.cs { color: #c2741f; font-style: italic } /* Comment.Special */
+.gd { color: #000; background-color: #ffdddd } /* Generic.Deleted */
+.ge { color: #000; font-style: italic } /* Generic.Emph */
+.gr { color: #a00; } /* Generic.Error */
+.gh { color: #999; } /* Generic.Heading */
+.gi { color: #000; background-color: #ddffdd } /* Generic.Inserted */
+.go { color: #888; } /* Generic.Output */
+.gp { color: #555; } /* Generic.Prompt */
+.gs { } /* Generic.Strong */
+.gu { color: #aaa; } /* Generic.Subheading */
+.gt { color: #a00; } /* Generic.Traceback */
+.k { color: #07a; } /* Keyword */
+.kc { color: #07a; } /* Keyword.Constant */
+.kd { color: #07a; } /* Keyword.Declaration */
+.kn { color: #07a; } /* Keyword.Namespace */
+.kp { color: #07a; } /* Keyword.Pseudo */
+.kr { color: #07a; } /* Keyword.Reserved */
+.kt { color: #07a; } /* Keyword.Type */
+.na { color: #444; } /* Name.Attribute */
+.nb { color: #07a; } /* Name.Builtin */
+.nc { color: #444; } /* Name.Class */
+.no { color: #444; } /* Name.Constant */
+.nd { color: #444; } /* Name.Decorator */
+.ni { color: #444; } /* Name.Entity */
+.ne { color: #444; } /* Name.Exception */
+.nf { color: #444; } /* Name.Function */
+.nl { color: #444; } /* Name.Label */
+.nn { color: #444; } /* Name.Namespace */
+.nt { color: #444; } /* Name.Tag */
+.nv { color: #444; } /* Name.Variable */
+.ow { color: #444; } /* Operator.Word */
+.w { color: #bbb; } /* Text.Whitespace */
+.m { color: #275; } /* Literal.Number */
+.mf { color: #275; } /* Literal.Number.Float */
+.mh { color: #275; } /* Literal.Number.Hex */
+.mi { color: #275; } /* Literal.Number.Integer */
+.mo { color: #275; } /* Literal.Number.Oct */
+.s { color: #275;} /* Literal.String */
+.sb { color: #275; } /* Literal.String.Backtick */
+.sc { color: #275; } /* Literal.String.Char */
+.sd { color: #275; } /* Literal.String.Doc */
+.s2 { color: #275; } /* Literal.String.Double */
+.se { color: #275; } /* Literal.String.Escape */
+.sh { color: #275; } /* Literal.String.Heredoc */
+.si { color: #275; } /* Literal.String.Interpol */
+.sx { color: #275; } /* Literal.String.Other */
+.sr { color: #275; } /* Literal.String.Regex */
+.s1 { color: #275; } /* Literal.String.Single */
+.ss { color: #275; } /* Literal.String.Symbol */
+.bp { color: #999; } /* Name.Builtin.Pseudo */
+.vc { color: #077; } /* Name.Variable.Class */
+.vg { color: #077; } /* Name.Variable.Global */
+.vi { color: #077; } /* Name.Variable.Instance */
+.il { color: #099; } /* Literal.Number.Integer.Long */
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition-property: background;
+  transition-duration: 0.2s;
+}
+
+a:active { color: #777; }
+
+a:after {
+  position: relative;
+  content: "\FEFF°";
+  margin-left: 0.10em;
+  font-size: 90%;
+  top: -0.10em;
+  color: #933;
+}
+
+a[name]:after{ content: none; }
+
+a.no-symbol-before:hover {
+  background: none;
+}
+
+a.no-symbol-before:after {
+  content: none;
+}
+
+div > a:after {
+  content: none;
+}
+
+a:hover {
+  background: #f0f8f8;
+  transition-property: background;
+  transition-duration: 0.2s;
+  border-radius: 0.35rem;
+}
