@@ -1,6 +1,6 @@
 #lang pollen
 
-◊define[point-size 24]
+◊define[point-size 20]
 ◊define[line-height 1.35]
 ◊define[line-length 60]
 ◊define[text-color "#222"]
