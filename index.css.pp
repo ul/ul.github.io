@@ -223,9 +223,10 @@ a:hover {
   opacity: 0.8;
 }
 
-.note {
+.margin {
   position: absolute;
   left: -8rem;
+  width: 8rem;
 }
 
 ul {

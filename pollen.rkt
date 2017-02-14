@@ -55,7 +55,7 @@
   `(span ((class ,code-class)) ,(apply link (format "http://github.com/~a" repo) texts)))
 
 (define (date metas)
-  `(div ((class "date note")) ,(select-from-metas 'date metas)))
+  `(div ((class "date margin")) ,(select-from-metas 'date metas)))
 
 (define (nav-link doc arr)
   (when/splice
