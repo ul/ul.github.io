@@ -1,6 +1,6 @@
 #lang pollen
 
-◊define[cv-url "https://dl.dropboxusercontent.com/u/3751987/CV.pdf"]
+◊define[cv-url "/CV.pdf"]
 ◊define[linked-url "https://www.linkedin.com/in/ruslan-prokopchuk-30849a7b/"]
 ◊define[github-url "https://github.com/ul/"]
 ◊define[email "fer.obbee@gmail.com"]
