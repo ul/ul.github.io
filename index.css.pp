@@ -17,7 +17,6 @@ html, body {
 
 body {
   font-family: 'PT Sans', sans-serif;
-  /* font-family: 'PT Serif', serif; */
   line-height: ◊|line-height|;
   display: flex;
   flex-direction: column;
