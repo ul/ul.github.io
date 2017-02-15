@@ -60,11 +60,11 @@
 (define (left-date metas)
   `(div ((class "date left-margin")) ,(select-from-metas 'date metas)))
 
-(define (nav-link doc arr)
+(define (nav-link doc arr cls)
   (when/splice
    doc
    (let ([href (symbol->string doc)])
-     `(a ((class "box-link") (href ,href))
+     `(a ((class ,(string-append "box-link " cls)) (href ,href))
          (div ,arr)
          (div ,(select 'h1 doc))))))
 

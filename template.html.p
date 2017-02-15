@@ -17,9 +17,9 @@
     ◊define[nxt (next here)]
     ◊->html{
       ◊div[#:class "nav"]{
-        ◊nav-link[prv 'larr]
-        ◊nav-link[top 'uarr]
-        ◊nav-link[nxt 'rarr]
+        ◊nav-link[prv 'larr "previous"]
+        ◊nav-link[top 'uarr "top"]
+        ◊nav-link[nxt 'rarr "next"]
       }
     }
 </body>

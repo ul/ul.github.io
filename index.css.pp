@@ -200,6 +200,19 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: ◊|(/ line-length 3)|ch;
+}
+
+.box-link.previous {
+  text-align: right;
+}
+
+.box-link.top {
+  text-align: center;
+}
+
+.box-link.next {
+  text-align: left;
 }
 
 .box-link:hover {
