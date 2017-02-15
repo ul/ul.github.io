@@ -61,12 +61,13 @@
   `(div ((class "date left-margin")) ,(select-from-metas 'date metas)))
 
 (define (nav-link doc arr cls)
-  (when/splice
-   doc
-   (let ([href (symbol->string doc)])
-     `(a ((class ,(string-append "box-link " cls)) (href ,href))
-         (div ,arr)
-         (div ,(select 'h1 doc))))))
+  `(div
+    ,(when/splice
+      doc
+      (let ([href (symbol->string doc)])
+        `(a ((class ,(string-append "box-link " cls)) (href ,href))
+            (div ,arr)
+            (div ,(select 'h1 doc)))))))
 
 (define (page-children metas)
   (let-values ([(dir name _)

@@ -18,10 +18,11 @@ body {
 
 .content {
   flex: 1;
+  min-width: 60ch;
   max-width: 60ch;
   padding: 0;
-  margin: 3rem 0 0 0;
   position: relative;
+  margin: 3em 12rem 0 12rem;
 }
 
 main {
@@ -185,7 +186,12 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20ch;
+  flex: 1;
+}
+
+.nav > div {
+  width: 33.333%;
+  display: flex;
 }
 
 .box-link.previous {
@@ -213,7 +219,25 @@ a:hover {
 
 .nav {
   display: flex;
-  justify-content: center;
+  min-width: 60ch;
+  max-width: 60ch;
+  margin: 0 12rem 0 12rem;
+}
+
+@media all and (max-width: 1200px) {
+  html, body {
+    font-size: 15px;
+  }
+  body {
+    align-items: inherit;
+  }
+  .nav, .content {
+    margin: 0 0.5rem 0 0.5rem;
+    min-width: inherit;
+  }
+  .left-margin, .right-margin {
+    display: none !important;
+  }
 }
 
 .date {
@@ -242,7 +266,7 @@ h3.left-margin, h4.left-margin, .left-margin h3, .left-margin h4 {
 
 .right-margin {
   position: absolute;
-  left: 60ch;
+  left: calc(2rem + 60ch);
   width: 10rem;
   display: flex;
   flex-direction: column;

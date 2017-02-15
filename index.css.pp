@@ -2,12 +2,14 @@
 
 ◊define[point-size 20]
 ◊define[line-height 1.35]
+◊define[min-line-length 45]
 ◊define[line-length 60]
 ◊define[text-color "#222"]
 ◊define[background-color "#fffff8"]
 ◊define[code-background-color "#fcfcf8"]
 ◊define[code-border-color "#f0f0f8"]
 ◊define[link-background-color "#afeeee"]
+◊define[margin-width 12]
 
 html, body {
   font-size: ◊|point-size|px;
@@ -29,10 +31,11 @@ body {
 
 .content {
   flex: 1;
+  min-width: ◊|line-length|ch;
   max-width: ◊|line-length|ch;
   padding: 0;
-  margin: 3rem 0 0 0;
   position: relative;
+  margin: 3em ◊|margin-width|rem 0 ◊|margin-width|rem;
 }
 
 main {
@@ -200,7 +203,12 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: ◊|(/ line-length 3)|ch;
+  flex: 1;
+}
+
+.nav > div {
+  width: 33.333%;
+  display: flex;
 }
 
 .box-link.previous {
@@ -228,7 +236,25 @@ a:hover {
 
 .nav {
   display: flex;
-  justify-content: center;
+  min-width: ◊|line-length|ch;
+  max-width: ◊|line-length|ch;
+  margin: 0 ◊|margin-width|rem 0 ◊|margin-width|rem;
+}
+
+@media all and (max-width: ◊|(* line-length point-size)|px) {
+  html, body {
+    font-size: 15px;
+  }
+  body {
+    align-items: inherit;
+  }
+  .nav, .content {
+    margin: 0 0.5rem 0 0.5rem;
+    min-width: inherit;
+  }
+  .left-margin, .right-margin {
+    display: none !important;
+  }
 }
 
 .date {
@@ -237,7 +263,7 @@ a:hover {
 
 .left-margin {
   position: absolute;
-  left: -12rem;
+  left: -◊|margin-width|rem;
   width: 10rem;
   display: flex;
   flex-direction: column;
@@ -257,7 +283,7 @@ h3.left-margin, h4.left-margin, .left-margin h3, .left-margin h4 {
 
 .right-margin {
   position: absolute;
-  left: ◊|line-length|ch;
+  left: calc(2rem + ◊|line-length|ch);
   width: 10rem;
   display: flex;
   flex-direction: column;
