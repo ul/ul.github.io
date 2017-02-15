@@ -18,7 +18,7 @@ html, body {
 }
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Serif', serif;
   line-height: ◊|line-height|;
   display: flex;
   flex-direction: column;
@@ -40,10 +40,6 @@ body {
 
 main {
   margin-bottom: 10rem;
-}
-
-.mono {
-  font-family: 'PT Mono', monospace;
 }
 
 .topic {
@@ -68,8 +64,12 @@ main {
   display: none;
 }
 
-pre, .code {
+pre, .code, .mono, .gist * {
   font-family: 'PT Mono', monospace;
+}
+
+.gist .gist-meta {
+  display: none;
 }
 
 ◊; syntax colors adapted from Racket documentation

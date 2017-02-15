@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Serif', serif;
   line-height: 1.35;
   display: flex;
   flex-direction: column;
@@ -27,10 +27,6 @@ body {
 
 main {
   margin-bottom: 10rem;
-}
-
-.mono {
-  font-family: 'PT Mono', monospace;
 }
 
 .topic {
@@ -55,8 +51,12 @@ main {
   display: none;
 }
 
-pre, .code {
+pre, .code, .mono, .gist * {
   font-family: 'PT Mono', monospace;
+}
+
+.gist .gist-meta {
+  display: none;
 }
 
 
