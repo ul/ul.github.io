@@ -259,13 +259,18 @@ a:hover {
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: circle;
   padding-left: 0;
+  line-height: 1.45;
 }
 
 h3.left-margin, h4.left-margin, .left-margin h3, .left-margin h4 {
   margin: 0;
   text-align: right;
+}
+
+h4.left-margin, .left-margin h4 {
+  opacity: 0.8;
 }
 
 .right-margin {

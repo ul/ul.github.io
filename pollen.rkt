@@ -84,7 +84,7 @@
   (let* ([post (symbol->string post)]
          [metas (pm-metas post)]
          [doc (pm-doc post)])
-    `(li ,(left-date metas) ,(link post (select 'h1 doc)))))
+    `(li ,(link post (select 'h1 doc) (date metas)))))
 
 (define (list-posts metas)
   `(ul ,@(map post->item (page-children metas))))
