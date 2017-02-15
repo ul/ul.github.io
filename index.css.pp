@@ -223,13 +223,31 @@ a:hover {
   opacity: 0.8;
 }
 
-.margin {
+.left-margin {
   position: absolute;
-  left: -8rem;
-  width: 8rem;
+  left: -12rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
 }
 
 ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+h3.left-margin, h4.left-margin, .left-margin h3, .left-margin h4 {
+  margin: 0;
+  text-align: right;
+}
+
+.right-margin {
+  position: absolute;
+  left: ◊|line-length|ch;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }

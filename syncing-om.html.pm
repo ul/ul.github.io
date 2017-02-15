@@ -2,9 +2,9 @@
 
 ◊define-meta[date]{2014-05-20}
 
-◊topic{Syncing Om with Sente}
-
 ◊date[metas]
+
+◊topic{Syncing Om with Sente}
 
 ◊main{
 

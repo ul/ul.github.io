@@ -55,7 +55,10 @@
   `(span ((class ,code-class)) ,(apply link (format "http://github.com/~a" repo) texts)))
 
 (define (date metas)
-  `(div ((class "date margin")) ,(select-from-metas 'date metas)))
+  `(div ((class "date right-margin")) ,(select-from-metas 'date metas)))
+
+(define (left-date metas)
+  `(div ((class "date left-margin")) ,(select-from-metas 'date metas)))
 
 (define (nav-link doc arr)
   (when/splice
@@ -80,7 +83,7 @@
   (let* ([post (symbol->string post)]
          [metas (pm-metas post)]
          [doc (pm-doc post)])
-    `(li ,(date metas) ,(link post (select 'h1 doc)))))
+    `(li ,(left-date metas) ,(link post (select 'h1 doc)))))
 
 (define (list-posts metas)
   `(ul ,@(map post->item (page-children metas))))
