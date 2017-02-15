@@ -41,7 +41,7 @@ body {
 .topic {
   text-transform: uppercase;
   padding-top: 0em;
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
 .highlight {
@@ -232,6 +232,7 @@ a:hover {
 
 .nav {
   display: flex;
+  width: 100%;
   /* min-width: ◊|line-length|ch; */
   max-width: ◊|line-length|ch;
   margin: 3em ◊|margin-width|rem 0 ◊|margin-width|rem;
@@ -245,9 +246,9 @@ a:hover {
     margin: 0.5rem 0.5rem 0 0.5rem;
     /* min-width: inherit; */
   }
-  .topic {
+  /*.topic {
     margin-top: 0.5rem;
-  }
+  }*/
   .left-margin, .right-margin {
     display: none !important;
   }
