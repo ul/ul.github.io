@@ -31,15 +31,11 @@ body {
 
 .content {
   flex: 1;
-  min-width: ◊|line-length|ch;
+  /* min-width: ◊|line-length|ch; */
   max-width: ◊|line-length|ch;
   padding: 0;
   position: relative;
   margin: 3em ◊|margin-width|rem 0 ◊|margin-width|rem;
-}
-
-main {
-  margin-bottom: 10rem;
 }
 
 .topic {
@@ -236,29 +232,36 @@ a:hover {
 
 .nav {
   display: flex;
-  min-width: ◊|line-length|ch;
+  /* min-width: ◊|line-length|ch; */
   max-width: ◊|line-length|ch;
-  margin: 0 ◊|margin-width|rem 0 ◊|margin-width|rem;
+  margin: 3em ◊|margin-width|rem 0 ◊|margin-width|rem;
 }
 
 @media all and (max-width: ◊|(* line-length point-size)|px) {
   html, body {
-    font-size: 15px;
-  }
-  body {
-    align-items: inherit;
+    font-size: 16px;
   }
   .nav, .content {
-    margin: 0 0.5rem 0 0.5rem;
-    min-width: inherit;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    /* min-width: inherit; */
+  }
+  .topic {
+    margin-top: 0.5rem;
   }
   .left-margin, .right-margin {
     display: none !important;
   }
 }
 
+@media all and (max-width: ◊|(* 0.5 line-length point-size)|px) {
+  body {
+    align-items: inherit;
+  }
+}
+
 .date {
   opacity: 0.8;
+  white-space: nowrap;
 }
 
 .left-margin {

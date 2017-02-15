@@ -2,9 +2,7 @@
 
 ◊define-meta[date]{2015-11-02}
 
-◊date[metas]
-
-◊topic{Automating Clojure refactor with rewrite-clj}
+◊topic{Automating Clojure refactor with rewrite-clj ◊date[metas]}
 
 ◊main{
 

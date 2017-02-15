@@ -55,7 +55,7 @@
   `(span ((class ,code-class)) ,(apply link (format "http://github.com/~a" repo) texts)))
 
 (define (date metas)
-  `(div ((class "date right-margin")) ,(select-from-metas 'date metas)))
+  `(sup ((class "date")) ,(select-from-metas 'date metas)))
 
 (define (left-date metas)
   `(div ((class "date left-margin")) ,(select-from-metas 'date metas)))
