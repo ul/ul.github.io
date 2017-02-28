@@ -2,6 +2,7 @@
 
 ◊index.html{
   ◊archive.html{
+    til/2017-02-28.html
     automating-refactor.html
     syncing-om.html
   }

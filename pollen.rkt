@@ -1,4 +1,4 @@
-#lang racket/base
+#lang racket
 (require
  racket/file
  txexpr
@@ -16,7 +16,9 @@
 (define (root . elements)
   (txexpr 'div '((class "content"))
           (decode-elements elements
-                           #:txexpr-elements-proc decode-paragraphs
+                           #:txexpr-elements-proc
+                           (curry decode-paragraphs
+                            #:linebreak-proc (λ(x) (decode-linebreaks x " ")))
                            #:string-proc (compose1 smart-quotes smart-dashes)
                            #:exclude-tags '(style script pre)
                            #:exclude-attrs (list exclusion-mark-attr)
@@ -65,7 +67,7 @@
     ,(when/splice
       doc
       (let ([href (symbol->string doc)])
-        `(a ((class ,(string-append "box-link " cls)) (href ,href))
+        `(a ((class ,(string-append "box-link " cls)) (href ,(string-append "/" href)))
             (div ,arr)
             (div ,(select 'h1 doc)))))))
 
@@ -88,3 +90,14 @@
 
 (define (list-posts metas)
   `(ul ,@(map post->item (page-children metas))))
+
+(define (left-margin . elements)
+  `(div ((class "left-margin")) ,@elements))
+
+(define (right-margin . elements)
+  `(div ((class "right-margin")) ,@elements))
+
+(define (todo . elements)
+  `(code ((class "todo"))
+    (span ((class "todo-tag")) "TODO ")
+    ,@elements))

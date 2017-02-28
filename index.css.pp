@@ -287,7 +287,7 @@ h3.left-margin, h4.left-margin, .left-margin h3, .left-margin h4 {
 }
 
 h4.left-margin, .left-margin h4 {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .right-margin {
@@ -297,4 +297,17 @@ h4.left-margin, .left-margin h4 {
   display: flex;
   flex-direction: column;
   margin: 0;
+}
+
+.left-margin, .right-margin {
+  opacity: 0.8;
+}
+
+.todo {
+  font-size: 80%;
+  background-color: ◊|code-background-color|;
+}
+
+.todo-tag {
+  color: ◊|keyword-color|;
 }
