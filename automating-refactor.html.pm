@@ -20,8 +20,10 @@ Not a big win really. Some space is saved, arguably less to type (but editor aut
 
 Actually, I was inclined to not invest much efforts in that refactor and decline it as soon as I realize that I mess with it too long, because of not much ROI in that particular case. But I decided to finish up the thing because:
 
-* it is good exercise to sharp coding skills
-* hey, in the future I could really need this type of refactor, I want to be ready!
+◊ul{
+  ◊li{it is good exercise to sharp coding skills}
+  ◊li{hey, in the future I could really need this type of refactor, I want to be ready!}
+}
 
 So, my goals was to write a code, which will automatically convert ◊strong{(1-3)} cases in the codebase, and also will import ◊code{row} and ◊code{col} functions in ◊code{ns} declaration where necessary (the latter task is not covered in this article and left as an exercise to the reader).
 
@@ -55,8 +57,10 @@ And write simple recursive walk over the tree:
 
 Note two things:
 
-* We pass zipper location, not the node it points, directly to  the ◊code{editor}, in contrast to using ◊code{(z/edit loc editor)}. It makes things simpler, because ◊code{rewrite-clj.zip} has many handy node testing (like ◊code{z/vector?} or ◊code{z/map?}) and editing functions (like ◊code{z/assoc} or ◊code{z/insert-right} (automatically inserting whitespace node when necessary!)), and they take zipper location, not the plain node, as an argument. The only downside I see is that in editor we must guarantee that we return edited, but the same location, to be sure that we don't skip nodes during traverse. May be using ◊code{z/subedit-node} and taking a root from returned zipper can solve this inconvenience, but I've not investigated this approach yet.
-* We don't separate matching and editing, just return location unedited if it does not require refactor.
+◊ul{
+  ◊li{We pass zipper location, not the node it points, directly to  the ◊code{editor}, in contrast to using ◊code{(z/edit loc editor)}. It makes things simpler, because ◊code{rewrite-clj.zip} has many handy node testing (like ◊code{z/vector?} or ◊code{z/map?}) and editing functions (like ◊code{z/assoc} or ◊code{z/insert-right} (automatically inserting whitespace node when necessary!)), and they take zipper location, not the plain node, as an argument. The only downside I see is that in editor we must guarantee that we return edited, but the same location, to be sure that we don't skip nodes during traverse. May be using ◊code{z/subedit-node} and taking a root from returned zipper can solve this inconvenience, but I've not investigated this approach yet.}
+  ◊li{We don't separate matching and editing, just return location unedited if it does not require refactor.}
+}
 
 Now we can represent refactor as such editor function. To apply several refactors in a row, we can just compose them. The only trick I would add to is allowing editor to return falsey value for unedited location. This shorthand will significantly simplify writing editors.
 
