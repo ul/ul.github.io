@@ -20,7 +20,7 @@
 
 \documentclass{scrartcl}
 
-\reversemarginpar % Move the margin to the left of the page 
+\reversemarginpar % Move the margin to the left of the page
 
 \newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
 
@@ -52,6 +52,8 @@
 \begin{cv}{\spacedallcaps{Ruslan Prakapchuk}}\vspace{1.5em} % Your name
 
 \noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{aka}{Ruslan Prokopchuk}
 
 \NewEntry{born}{18 April 1988} % Birthplace and date
 
@@ -114,10 +116,10 @@ Creating single-page applications for managing wide range and volumes of data wi
 %------------------------------------------------
 \newpage
 
-\NewEntry{2012--2014}{Full-stack Web Developer, A-a-ah!}
+\NewEntry{2012--2014}{Full-stack Web Developer, IProjecting}
 
-\Description{\MarginText{A-a-ah!\\Moscow, Russia\\Remote}
-Project dedicated to cities, their places and events. Mostly focused on Moscow. Back-end \& front-end programming. LAMP stack, Yii + Smarty, Redis, Javascript/jQuery, HTML, CSS.
+\Description{\MarginText{IProjecting\\Moscow, Russia\\Remote}
+Worked on ``A-a-ah!'' project dedicated to cities, their places and events. Mostly focused on Moscow. Back-end \& front-end programming. LAMP stack, Yii + Smarty, Redis, Javascript/jQuery, HTML, CSS.
 \newline
 Links:
 \begin{itemize}
@@ -162,6 +164,20 @@ Support and further development of radio's website based on Campsite PHP engine.
 \NewEntry{}{Note}{}
 
 \Description{I have no official university diploma. Sorry if it is an issue for you.}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	VOLUNTEER
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Volunteer Experience}\vspace{1em}
+
+\NewEntry{2016--2017}{IT2School, Odessa}
+
+\Description{\MarginText{Computer Science Teacher}Run two CS/Python courses for children of age 9-18.}
 
 %------------------------------------------------
 
