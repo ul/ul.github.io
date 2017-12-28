@@ -18,7 +18,6 @@ body {
 
 .content {
   flex: 1;
-  /* min-width: 60ch; */
   max-width: 80ch;
   padding: 0;
   position: relative;
@@ -41,7 +40,6 @@ body {
   border-top: 1px solid #f0f0f8;
   border-bottom: 1px solid #f0f0f8;
   margin-bottom: 1.2rem;
-  /* font-size: 16px; */
   font-size: 80%;
 }
 
@@ -57,12 +55,6 @@ pre, code, .code, .mono, .gist * {
 .gist .gist-meta {
   display: none;
 }
-
-
-
-
-
-
 
 .code {
   color: #07a;
@@ -132,26 +124,26 @@ pre, code, .code, .mono, .gist * {
 .il { color: #099; } /* Literal.Number.Integer.Long */
 
 
-
 a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: inherit;
   transition-property: background;
   transition-duration: 0.2s;
+  border-radius: 0.35rem;
 }
 
 a:active {
   color: #777;
 }
 
-a:after {
-  position: relative;
-  content: "\FEFF°";
-  margin-left: 0.10em;
-  font-size: 90%;
-  top: -0.10em;
-  color: #933;
-}
+/* a:after { */
+/*   position: relative; */
+/*   content: "\FEFF°"; */
+/*   margin-left: 0.10em; */
+/*   font-size: 90%; */
+/*   top: -0.10em; */
+/*   color: #933; */
+/* } */
 
 a[name]:after{ content: none; }
 
@@ -171,7 +163,6 @@ a:hover {
   background-color: #afeeee;
   transition-property: background;
   transition-duration: 0.2s;
-  border-radius: 0.35rem;
 }
 
 .box-link {
