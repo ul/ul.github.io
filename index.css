@@ -1,3 +1,5 @@
+/* General styling */
+
 html, body {
   font-size: 20px;
   width: 100vw;
@@ -58,11 +60,7 @@ pre, code, .code, .mono, .gist * {
   display: none;
 }
 
-
-
-
-
-
+/* Gist styling */
 
 .code {
   color: #07a;
@@ -131,7 +129,7 @@ pre, code, .code, .mono, .gist * {
 .vi { color: #077; } /* Name.Variable.Instance */
 .il { color: #099; } /* Literal.Number.Integer.Long */
 
-
+/* Links, nav and misc elements */
 
 a {
   text-decoration: none;
