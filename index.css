@@ -161,9 +161,13 @@ a.no-symbol-before:after {
   content: none;
 }
 
-/*div > a:after, li a:after {
+.nav a:after {
   content: none;
-}*/
+}
+
+.nav .archive {
+    font-size: 2rem;
+}
 
 a:hover {
   background-color: #afeeee;
