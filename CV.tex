@@ -32,12 +32,14 @@
 \usepackage{hyperref} % Required for adding links	and customizing them
 \hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
 
-\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+\newlength{\datebox}\settowidth{\datebox}{2006--Present} % Set the width of the date box in each block
 
 \newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 \vspace{0.5em}} % Add some white space after each new entry
 
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\newcommand{\Highlight}[1]{\textcolor{Maroon}{#1}}
 
 %----------------------------------------------------------------------------------------
 
@@ -53,29 +55,27 @@
 
 \noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
 
-\NewEntry{aka}{Ruslan Prokopchuk}
+\NewEntry{aka}{Ruslan Pr\Highlight{o}k\Highlight{o}pchuk}
 
-%\NewEntry{born}{18 April 1988} % Birthplace and date
-
-%\NewEntry{citizenship}{Belarus} % Citizenship
-
-%\NewEntry{residence}{Sydney, Australia} % Residence
+\NewEntry{residence}{Sydney, Australia} % Residence
 
 \NewEntry{email}{\href{mailto:fer.obbee@gmail.com}{fer.obbee@gmail.com}} % Email address
-
-\NewEntry{skype}{ruslan.prokopchuk} % Skype ID
 
 \NewEntry{github}{\href{https://github.com/ul}{https://github.com/ul}} % Personal website
 
 \NewEntry{phone}{+61 408 703 246} % Phone number(s)
 
-\vspace{1em} % Extra white space between the personal information section and goal
+\vspace{1.5em} % Extra space between major sections
 
-\noindent\spacedlowsmallcaps{Profile}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+%----------------------------------------------------------------------------------------
+%	PROFILE
+%----------------------------------------------------------------------------------------
 
-\Description{I prefer to participate in projects having a high positive social impact by either revolutionary innovations or small improvements of day-by-day life and work. That's why nowadays I'm specialised in front-end development as web applications are the essential part of millions of people's access to tech goodness.
-\\\ \\
-I admire equally two things in programming: it is the source of endless play, and it is the tool for getting things done. I like to evaluate new technologies and integrate them into the development process when they match my criteria including simplicity (they reduce incidental complexity) and robustness (they don't eat my laundry). That's why nowadays I favour Clojure/ClojureScript stack and am evaluating Rust and OCaml/Reason.}\vspace{2em} % Goal text
+\noindent\spacedlowsmallcaps{Profile}\vspace{1em}
+
+\Description{My primary professional interest is the engineering aspect of delivering sophisticated yet robust and high-performance products. I fancy equally entire spectrum of technologies involved in it, including programming languages, teamwork techniques and thinking frameworks. My expertise lies mostly in web development, but I'm open to growing in other fields.}
+
+\vspace{1em} % Extra space between major sections
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
@@ -83,97 +83,27 @@ I admire equally two things in programming: it is the source of endless play, an
 
 \noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
 
-\NewEntry{2017--Present}{Senior Developer, Atlassian}
+\NewEntry{2017--Present}{Senior Engineer, Atlassian}
 
-\Description{\MarginText{Atlassian\\Sydney, Australia\\Onsite}
-Portfolio for Jira Server
+\Description{\MarginText{Atlassian\\Sydney, Australia}
+I lead frontend engineering of Advanced~Roadmaps (former Portfolio~for~Jira) since its inception as Portfolio~3.0 through release for Jira~Server and to Jira~Cloud release. As a member of a fantastic team, I've got a chance to contribute to all stages of product development.
 \begin{itemize}
-\item Helped to fit product for enterprise users by improving SPA performance.
-\item Techleading Portfolio 3.0 development.
+	\item{Designed and documented app architecture.}
+	\item{Organized regular knowledge sharing sessions.}
+	\item{Facilitated cross-team collaboration and alignment.}
+	\item{Led development of a few features.}
+	\item{Implemented series of performance optimizations.}
+	\item{Advised and aided process improvements.}
 \end{itemize}}
 
 %------------------------------------------------
 
-\NewEntry{2016--2017}{Senior Software Engineer, Lohika}
+\NewEntry{2006--2017}{Various roles}
 
-\Description{\MarginText{Lohika\\Odessa, Ukraine\\Onsite}
-Participated in development of 100kLOC SPA with React/Redux stack:
-\begin{itemize}
-\item Reduced app complexity significantly by expressing data dependencies in
-  a reactive way.
-\item Improved unit-testing experience by more fine-grained separation of pure and
-  impure code.
-\item Implemented tons of new features.
-\end{itemize}}
-
-%------------------------------------------------
-
-\NewEntry{2015--2016}{Senior Software Engineer, Condense}
-
-\Description{\MarginText{Condense\\Hobart, Australia\\Remote}
-Creating single-page applications for managing wide range and volumes of data with complex logic for Australian research institutions. Detailed achievements:
-\begin{itemize}
-\item Developed application architecture based on unidirectional flow and functional reactive programming paradigms.
-\item Developed ClojureScript libraries implementing that architecture and used them with Facebook React to achieve excellent development performance and code clarity and maintainability.
-\item Delivered large applications using the mentioned approach and libraries.
-\item Refactored existing applications to significantly reduce their incidental complexity.
-\end{itemize}}
-
-%------------------------------------------------
-
-\NewEntry{2012--2014}{Full-stack Web Developer, IProjecting}
-
-\Description{\MarginText{IProjecting\\Moscow, Russia\\Remote}
-Worked on ``A-a-ah!'' project dedicated to cities, their places and events. Mostly focused on Moscow. Back-end \& front-end programming. LAMP stack, Yii + Smarty, Redis, JavaScript/jQuery, HTML, CSS.
-%\newline
-%Links:
-%\begin{itemize}
-%	\item \href{http://a-a-ah.ru/}{Russian version, lot of content, regularly updated}
-%	\item \href{http://a-a-ah.com/}{English version, less actively maintained}
-%\end{itemize}
-}
-
-%------------------------------------------------
-
-\NewEntry{2011--2012}{Software Engineer, N-COM}
-
-\Description{\MarginText{N-COM\\Moscow, Russia\\Onsite+Remote}
-Full Brain-Computer Interface software suite: signal recognition, interfacing various controlled devices, feedback/training/gamification applications. Technology stack: C\#, Python, scikit-learn, MDP, PyQT, ZeroMQ.}
-
-%------------------------------------------------
-
-\NewEntry{2006--2008}{Web Developer, European Radio for Belarus}
-
-\Description{\MarginText{ERB\\Minks, Belarus\\Onsite}
-Support and further development of radio's website based on Campsite PHP engine. The site was actively used for radio streaming and news publishing. LAMP stack, plus JavaScript/jQuery at the front-end part.}
-
-%------------------------------------------------
+\Description{\MarginText{Onsite \& Remote}
+Let me save you some time. I've been in the industry for a while and gained diverse experience working onsite and remotely in small and large teams. However, there is no point in listing companies and roles as my recent work experience summarises my profile the best. Just reach me out if you want to talk about my past in depth.}
 
 \vspace{1em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
-%\spacedlowsmallcaps{Education}\vspace{1em}
-%
-%\NewEntry{2010--2013}{University of Effective Development, Kiev}
-%
-%\Description{\MarginText{Instructor of Psychotechnics}Studied theoretical foundations and pragmatic techniques of psychic resources utilization, such as attention control and extreme situations handle and recover. Acquired qualification to use and teach those techniques.}
-%
-%%------------------------------------------------
-%
-%\NewEntry{2005--2008}{Belarusian State University, Minsk}
-%
-%\Description{\MarginText{Laser Physics and Spectroscopy 3-year course} Was in love with physics, but left university to follow my two other passions: travelling and programming.}
-%
-%\NewEntry{}{Note}{}
-%
-%\Description{I have no official university diploma. Sorry if it is an issue for you.}
-%
-%%------------------------------------------------
-%
-%\vspace{1em} % Extra space between major sections
 
 %----------------------------------------------------------------------------------------
 %	VOLUNTEER
@@ -183,99 +113,26 @@ Support and further development of radio's website based on Campsite PHP engine.
 
 \NewEntry{2016--2017}{IT2School, Odessa}
 
-\Description{\MarginText{Computer Science Teacher}Run two CS/Python courses for children of age 9-18.}
-
-%------------------------------------------------
+\Description{\MarginText{CS Teacher}Run two Computer Sciences \& Python courses for children of age 9-18.}
 
 \vspace{1em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-
-%\spacedlowsmallcaps{Publications}\vspace{1em}
-
-%\NewEntry{January 2013}{Publication Title}
-
-%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
-
-%------------------------------------------------
-
-%\NewEntry{Sept. 2012}{Publication Title}
-
-%\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
-
-%------------------------------------------------
-
-%\vspace{1em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS
-%----------------------------------------------------------------------------------------
-
-%\spacedlowsmallcaps{Computer Skills}\vspace{1em}
-
-%\Description{\MarginText{Languages}Rust, Clojure, ClojureScript, Julia, Python, JavaScript, CoffeeScript, HTML, CSS, OCaml, BuckleScript}
-
-%\Description{\MarginText{JS Frameworks}React/Redux/Saga}
-
-%\Description{\MarginText{VCS}Git, Mercurial}
-
-%\Description{\MarginText{OSes}Linux, Mac OS, Windows}
-
-%\Description{\MarginText{Other}Functional Programming, API Design, Machine Learning}
-
-%------------------------------------------------
-
-%\vspace{1em} % Extra space between major sections
 
 %----------------------------------------------------------------------------------------
 %	OTHER INFORMATION
 %----------------------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Other Information}\vspace{1em}
-
-%\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ School of Business Postgraduate Scholarship}
-
-%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-%\Description{2010\ \ $\cdotp$\ \ Top Achiever Award -- Commerce}
-
-%------------------------------------------------
-
-%\vspace{1em}
-
-%\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
-
-%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-%\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
-
-%------------------------------------------------
-
-\vspace{1em}
+\spacedlowsmallcaps{Misc}\vspace{1em}
 
 \newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
-\settowidth{\langbox}{Belarusian} % Length equals the length of "English" - if you have a longer language in your list put it here
+\settowidth{\langbox}{Belarusian} % Copy the longest entry here
 
 \Description{\MarginText{Languages}\parbox{\langbox}{\textsc{Russian}}\ \ $\cdotp$\ \ \ Mothertongue}
 
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
 \Description{\parbox{\langbox}{\textsc{Belarusian}}\ \ $\cdotp$\ \ \ Mothertongue}
 
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-
 \Description{\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Intermediate (conversationally fluent)}
-
-\vspace{1em}
-
-%------------------------------------------------
-
-%\Description{\MarginText{Interests}Flutes\ \ $\cdotp$\ \ Dorombs\ \ $\cdotp$\ \ Modern Jazz\ \ $\cdotp$\ \ Computer Music\ \ $\cdotp$\ \ Travelling\ \ \\ Constructivist epistemology\ \ $\cdotp$\ \ Psychotechnics\ \ $\cdotp$\ \ Magic: the Gathering}
-
-%----------------------------------------------------------------------------------------
 
 \end{cv}
 
