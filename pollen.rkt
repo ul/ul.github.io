@@ -5,7 +5,8 @@
 
 (define styles
   (string-replace
-    (string-append (file->string "./a17t.css")
+    (string-append (file->string "./fonts.css")
+                   (file->string "./a17t.css")
                    (file->string "./styles.css"))
     #px"\\s+"
     " "))
