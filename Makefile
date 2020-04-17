@@ -1,4 +1,5 @@
 blog:
+	raco pollen reset
 	raco pollen render
 
 cv:
