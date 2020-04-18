@@ -34,7 +34,7 @@
     ◊cell{get in touch}
     ◊cell{
       ◊link["mailto:fer.obbee@gmail.com"]{fer.obbee@gmail.com},
-      ◊link["http://twitter.com/northern_witch"]{@nothern_witch}}
+      ◊link["http://twitter.com/northern_witch"]{@northern_witch}}
   }
 }
 
