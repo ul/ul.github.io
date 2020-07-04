@@ -14,6 +14,6 @@
   ◊tlink["https://www.ibm.com/plex/"]{IBM Plex}
   ◊details{Font designed by Mike Abbink. I use it for body text.}
 
-  ◊tlink["https://github.com/andrew-paglinawan/QuicksandFamily"]{Quicksand}
-  ◊details{Font designed by Andrew Paglinawan. I use it for headings.}
+  ◊tlink["https://fonts.google.com/specimen/Galdeano"]{Galdeano}
+  ◊details{Font designed by Dario Manuel Muhafara. I use it for headings.}
 }
