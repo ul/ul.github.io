@@ -51,7 +51,7 @@ main {
   padding-left: 0;
 }
 
-.content ul {
+.content ul:not(:first-child) {
   margin-top: 0.5rem;
 }
 
