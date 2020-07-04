@@ -52,7 +52,7 @@ main {
 }
 
 .content ul:not(:first-child) {
-  margin-top: 0.5rem;
+  margin-top: 0;
 }
 
 .content ul li {
