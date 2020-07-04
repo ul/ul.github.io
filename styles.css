@@ -51,6 +51,10 @@ main {
   padding-left: 0;
 }
 
+.content ul {
+  list-style-type: lower-greek;
+}
+
 .content ul:not(:first-child) {
   margin-top: 0;
 }
