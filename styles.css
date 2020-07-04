@@ -34,6 +34,7 @@ main {
 .content h2 {
   font-weight: 400;
   letter-spacing: 0.11em;
+  margin-top: 3.5rem;
   text-transform: uppercase;
 }
 
@@ -43,4 +44,17 @@ main {
 
 .content h2 {
   font-size: 1.3rem;
+}
+
+.content table td,
+.content ul {
+  padding-left: 0;
+}
+
+.content ul {
+  margin-top: 0.5rem;
+}
+
+.content ul li {
+  margin-left: -0.75rem;
 }
