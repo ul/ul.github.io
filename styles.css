@@ -30,17 +30,17 @@ main {
   flex-direction: column;
 }
 
-h1,
-h2 {
+.content h1,
+.content h2 {
   font-weight: 400;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
-h1 {
+.content h1 {
   font-size: 1.7rem;
 }
 
-h2 {
+.content h2 {
   font-size: 1.3rem;
 }
