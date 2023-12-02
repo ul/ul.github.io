@@ -1,2 +1,2 @@
 cv:
-	pdflatex CV.tex
+	typst compile CV.typ
