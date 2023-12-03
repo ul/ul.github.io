@@ -18,7 +18,7 @@
   body
 
   align(right)[
-    #v(1em)
+    #v(1.95em)
     #emph[Updated on #datetime.today().display()]
   ]
 }
