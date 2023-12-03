@@ -5,7 +5,14 @@
 )
 
 #let gg(..children) = grid(columns: (1fr, 4fr), gutter: 0.65em, ..children)
-#let section(body) = align(right)[#emph(body)]
+#let section(body) = align(right)[
+  #v(1.35em)
+  #emph(body)
+]
+#let entry(year, role, first: false) = [
+  #if not first [#v(0.85em)]
+  #gg(emph[#year], strong[#role])
+]
 
 #section[Personal information]
 
@@ -26,12 +33,12 @@ My adaptability allows me to thrive in both onsite and remote work environments.
 
 #section[Work experience]
 
-#gg(emph[2020--Present], strong[Principal Software Engineer \@ Atlassian])
+#entry([2020--Present], [Principal Software Engineer \@ Atlassian], first: true)
 I support teams across Jira Software, mostly working on Premium and Enterprise experiences.
 My current focus is on platform adoption, efficient decision-making, quality uplift, and ownership system improvements.
 In the past, I also helped establish foundations for performance and scalability, operational excellence and all things frontend in multiple teams.
 
-#gg(emph[2017--2020], strong[Senior Software Engineer \@ Atlassian])
+#entry([2017--2020], [Senior Software Engineer \@ Atlassian])
 I led frontend engineering of Advanced Roadmaps (formerly Portfolio for Jira) since its inception as Portfolio 3.0 through the release for Jira Server and onto
 Jira Cloud. As a member of a fantastic team, I had the opportunity to contribute to all stages of product development.
 
@@ -42,21 +49,21 @@ Jira Cloud. As a member of a fantastic team, I had the opportunity to contribute
 - Implemented a series of performance optimizations.
 - Advised on and aided in process improvements.
 
-#gg(emph[2006--2017], strong[Various roles])
-For more details on my previous roles, please feel free to reach out to me. Otherwise, enjoy the time saved by this summary ;-)
+#entry([2006--2017], [Various roles])
+For more details on my previous roles, please feel free to reach out to me. Otherwise, enjoy the time saved ;-)
 
 #pagebreak(weak: true)
 
 #section[Volunteer experience]
 
-#gg(emph[2016--2017], strong[CS Teacher \@ IT2School Odesa])
+#entry([2016--2017], [CS Teacher \@ IT2School Odesa], first: true)
 I taught two Computer Science & Python courses for children ages 9 to 18.
 
 #section[Misc]
 
 #gg(
-  emph[Languages], 
-  gg([English],    [Advanced (CEFR level C1)], 
-     [Russian],    [Native], 
+  emph[Languages],
+  gg([English],    [Advanced (CEFR level C1)],
+     [Russian],    [Native],
      [Belarusian], [Native])
 )
