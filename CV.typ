@@ -7,7 +7,7 @@
 #let gg(..children) = grid(columns: (1fr, 4fr), gutter: 0.65em, ..children)
 #let section(body, first: false) = align(right)[
   #if not first [#v(1.3em)]
-  #emph(body)
+  #emph(text(tracking: 0.325em, body))
 ]
 #let entry(year, role, first: false) = [
   #if not first [#v(0.65em)]
