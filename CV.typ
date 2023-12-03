@@ -55,7 +55,7 @@ For more details on my previous roles, please feel free to reach out to me. Othe
 
 #pagebreak(weak: true)
 
-#section[Volunteer experience]
+#section([Volunteer experience], first: true)
 
 #entry([2016--2017], [CS Teacher \@ IT2School Odesa])
 I taught two Computer Science & Python courses for children ages 9 to 18.
