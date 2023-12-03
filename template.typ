@@ -9,7 +9,7 @@
 
   // Title row.
   align(left)[
-    #block(text(weight: 700, 1.75em, title))
+    #block(text(weight: "semibold", 1.95em, title))
   ]
 
   // Main body.

@@ -5,16 +5,17 @@
 )
 
 #let gg(..children) = grid(columns: (1fr, 4fr), gutter: 0.65em, ..children)
-#let section(body) = align(right)[
-  #v(1.35em)
+#let section(body, first: false) = align(right)[
+  #if not first [#v(1.3em)]
   #emph(body)
 ]
 #let entry(year, role, first: false) = [
-  #if not first [#v(0.85em)]
+  #if not first [#v(0.65em)]
   #gg(emph[#year], strong[#role])
 ]
 
-#section[Personal information]
+// #section[Personal information]
+#v(1.15em)
 
 #gg(
   [aka],       [Ruslan Pr#highlight("o")k#highlight("o")pchuk],
@@ -24,7 +25,7 @@
   [phone],     [+61 408 703 246]
 )
 
-#section[Profile]
+#section([Profile], first: true)
 
 My forte is setting up teams for success by raising the bar for quality while keeping process overhead to a minimum.
 I can help your company transition from startup hustle to sustainable growth and pragmatically manage technical debt.
