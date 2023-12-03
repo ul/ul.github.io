@@ -7,10 +7,10 @@
 #let gg(..children) = grid(columns: (1fr, 4fr), gutter: 0.65em, ..children)
 #let section(body, first: false) = align(right)[
   #if not first [#v(1.3em)]
-  #emph(text(tracking: 0.325em, body))
+  #text(size: 1.3em, tracking: 0.217em, body)
 ]
-#let entry(year, role, first: false) = [
-  #if not first [#v(0.65em)]
+#let entry(year, role) = [
+  #v(0.65em)
   #gg(emph[#year], strong[#role])
 ]
 
@@ -34,7 +34,7 @@ My adaptability allows me to thrive in both onsite and remote work environments.
 
 #section[Work experience]
 
-#entry([2020--Present], [Principal Software Engineer \@ Atlassian], first: true)
+#entry([2020--Present], [Principal Software Engineer \@ Atlassian])
 I support teams across Jira Software, mostly working on Premium and Enterprise experiences.
 My current focus is on platform adoption, efficient decision-making, quality uplift, and ownership system improvements.
 In the past, I also helped establish foundations for performance and scalability, operational excellence and all things frontend in multiple teams.
@@ -57,7 +57,7 @@ For more details on my previous roles, please feel free to reach out to me. Othe
 
 #section[Volunteer experience]
 
-#entry([2016--2017], [CS Teacher \@ IT2School Odesa], first: true)
+#entry([2016--2017], [CS Teacher \@ IT2School Odesa])
 I taught two Computer Science & Python courses for children ages 9 to 18.
 
 #section[Misc]
