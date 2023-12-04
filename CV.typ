@@ -1,21 +1,23 @@
 #import "template.typ": *
 
+#let title = "Ruslan Prakapchuk"
+
 #show: project.with(
-  title: "Ruslan Prakapchuk",
+  title: title,
 )
 
-#let gg(..children) = grid(columns: (1fr, 4fr), gutter: 0.65em, ..children)
-#let section(body, first: false) = align(right)[
-  #if not first [#v(1.3em)]
-  #text(size: 1.3em, tracking: 0.217em, body)
-]
+#let gg(..children) = style(styles => grid(columns: (measure(text(weight: "semibold", leading*3, " Ruslan"), styles).width, auto), row-gutter: leading, ..children))
+#let section(body) = gg([], [
+  #v(leading*2)
+  #text(size: leading*2, tracking: leading/2, body)
+])
 #let entry(year, role) = [
-  #v(0.65em)
+  #v(leading)
   #gg(emph[#year], strong[#role])
 ]
 
 // #section[Personal information]
-#v(1.15em)
+#v(leading*2)
 
 #gg(
   [aka],       [Ruslan Pr#highlight("o")k#highlight("o")pchuk],
@@ -25,7 +27,7 @@
   [phone],     [+61 408 703 246]
 )
 
-#section([Profile], first: true)
+#section([Profile])
 
 My forte is setting up teams for success by raising the bar for quality while keeping process overhead to a minimum.
 I can help your company transition from startup hustle to sustainable growth and pragmatically manage technical debt.
@@ -55,7 +57,7 @@ For more details on my previous roles, please feel free to reach out to me. Othe
 
 #pagebreak(weak: true)
 
-#section([Volunteer experience], first: true)
+#section([Volunteer experience])
 
 #entry([2016--2017], [CS Teacher \@ IT2School Odesa])
 I taught two Computer Science & Python courses for children ages 9 to 18.

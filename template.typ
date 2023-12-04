@@ -1,3 +1,5 @@
+#let leading = 0.65em
+
 #let project(
   title: "",
   body,
@@ -6,10 +8,11 @@
   set document(title: title)
   set page(numbering: "1", number-align: center)
   set text(font: "Atkinson Hyperlegible", lang: "en")
+  set par(leading: leading)
 
   // Title row.
   align(left)[
-    #block(text(weight: "semibold", 1.95em, title))
+    #block(text(weight: "semibold", leading*3, title))
   ]
 
   // Main body.
@@ -18,7 +21,7 @@
   body
 
   align(right)[
-    #v(1.95em)
+    #v(leading*3)
     #emph[Updated on #datetime.today().display()]
   ]
 }
