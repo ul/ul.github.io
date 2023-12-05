@@ -7,7 +7,7 @@
   // Set the document's basic properties.
   set document(title: title)
   set page(numbering: "1", number-align: center)
-  set text(font: "Atkinson Hyperlegible", lang: "en")
+  set text(font: "Atkinson Hyperlegible", lang: "en", fill: luma(10%))
   set par(leading: leading)
 
   // Title row.
