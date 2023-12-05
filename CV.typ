@@ -8,10 +8,11 @@
 
 #let gg(..children) = style(styles => grid(columns: (measure(text(weight: "semibold", leading*3, " Ruslan"), styles).width, auto), row-gutter: leading, ..children))
 
-#let section(body) = gg([], [
-  #v(leading*2)
-  #text(size: leading*2, tracking: leading/2, body)
-])
+#let section(body) = [
+  #v(leading*3)
+  #text(size: leading*2, tracking: leading/2, upper(body))
+  #v(leading)
+]
 
 #let entry(year, role, description) = [
   #v(leading)
