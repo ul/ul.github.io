@@ -80,3 +80,6 @@ I taught two Computer Science & Python courses for children ages 9 to 18.
      [Russian],    [Native],
      [Belarusian], [Native])
 )
+
+#v(leading*2)
+#gg(emph[Updated on], datetime.today().display())

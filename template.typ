@@ -19,9 +19,4 @@
   set par(justify: true)
 
   body
-
-  align(right)[
-    #v(leading*3)
-    #emph[Updated on #datetime.today().display()]
-  ]
 }
