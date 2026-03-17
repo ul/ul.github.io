@@ -6,7 +6,7 @@
   title: title,
 )
 
-#let gg(..children) = style(styles => grid(columns: (measure(text(weight: "semibold", leading*3, " Ruslan"), styles).width, auto), row-gutter: leading, ..children))
+#let gg(..children) = context grid(columns: (measure(text(weight: "semibold", leading*3, " Ruslan")).width, auto), row-gutter: leading, ..children)
 
 #let section(body) = [
   #v(leading*3)
@@ -35,7 +35,9 @@
 #v(leading*2)
 #gg(emph[profile], [
 My forte is setting up teams for success by raising the bar for quality while keeping process overhead to a minimum.
-I can help your company transition from startup hustle to sustainable growth and pragmatically manage technical debt.
+I can help your company transition from startup hustle to sustainable growth,
+and pragmatically manage both technical debt and cutting edge technology adoption.
+In the era of AI, I support teams by bringing focus and clarity to the _engineering_ aspect of their role.
 Despite holding a leadership role, I maintain my technical expertise and don't shy away from hands-on work with the team when necessary.
 My adaptability allows me to thrive in both onsite and remote work environments.
 ])
@@ -43,8 +45,9 @@ My adaptability allows me to thrive in both onsite and remote work environments.
 #section[Work experience]
 
 #entry([2020--Present], [Principal Software Engineer \@ Atlassian], [
-I support teams across Jira Software, mostly working on Premium and Enterprise experiences.
+I support teams across Jira, mostly working on Premium and Enterprise experiences.
 My current focus is on platform adoption, efficient decision-making, quality uplift, and ownership system improvements.
+I regularly enjoy deep engineering challenges in the frontend space, and work on efficient and responsible use of AI in development.
 In the past, I also helped establish foundations for performance and scalability, operational excellence and all things frontend in multiple teams.
 ])
 
@@ -67,6 +70,10 @@ For more details on my previous roles, please feel free to reach out to me. Othe
 #pagebreak(weak: true)
 
 #section([Volunteer experience])
+
+#entry([2024--Present], [RFS Volunteer \@ Mount Wilson], [
+I'm an active NSW Rural Fire Service member.
+])
 
 #entry([2016--2017], [CS Teacher \@ IT2School Odesa], [
 I taught two Computer Science & Python courses for children ages 9 to 18.
