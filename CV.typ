@@ -24,7 +24,8 @@
 
 #gg(
   emph[aka],       [Ruslan Pr#highlight("o")k#highlight("o")pchuk],
-  emph[residence], [Sydney, Australia],
+  emph[onsite],    [Sydney, Australia],
+  emph[remote],    [any timezone],
   emph[email],     link("mailto:fer.obbee@gmail.com"),
   emph[github],    link("https://github.com/ul"),
   emph[phone],     [+61 408 703 246]
