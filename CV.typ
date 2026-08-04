@@ -24,7 +24,7 @@
 
 #gg(
   emph[aka],       [Ruslan Pr#highlight("o")k#highlight("o")pchuk],
-  emph[onsite],    [Sydney, Australia],
+  emph[hybrid],    [Sydney, Australia],
   emph[remote],    [any timezone],
   emph[email],     link("mailto:fer.obbee@gmail.com"),
   emph[github],    link("https://github.com/ul"),
@@ -35,12 +35,10 @@
 
 #v(leading*2)
 #gg(emph[profile], [
-My forte is setting up teams for success by raising the bar for quality while keeping process overhead to a minimum.
-I can help your company transition from startup hustle to sustainable growth,
-and pragmatically manage both technical debt and cutting edge technology adoption.
-In the era of AI, I support teams by bringing focus and clarity to the _engineering_ aspect of their role.
-Despite holding a leadership role, I maintain my technical expertise and don't shy away from hands-on work with the team when necessary.
-My adaptability allows me to thrive in both onsite and remote work environments.
+I'm a hands-on Principal Software Engineer focused on making complex systems understandable and adaptable.
+I turn ambiguous engineering problems into decidable questions, then use investigation, evidence, and working code to establish architecture, patterns, and tools that help teams act with confidence.
+My deepest experience is in large-scale frontend architecture and complex web applications, including performance, scalability, and pragmatic adoption of new technologies.
+I'm particularly drawn to developer tools and technically deep products where better abstractions make sophisticated capabilities easier to understand and control.
 ])
 
 #section[Work experience]
